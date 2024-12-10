@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* setting untuk padding/width/height setiap element */
+/* simbol asterisk (*) digunakan untuk memilih semua element html */
+* {
+    box-sizing:border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* body html biasanya ada margin/padding */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 100vh;
+    width: 100vw;
+    background: white;
+}
+
+nav{
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 1rem 3rem;
+}
+
+a{
+    text-decoration: none;
+    color: #003459;
+}
+
+.himti-logo{
+    width: 52px;
+}
+
+.nav-links {
+    width: 30%;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.competition-sect{
+    height:100vh;
+    width:100vw;
+    background: #808AE7;
+}
+
+.about-sect{
+    height: 100vh;
+    width: 100vw;
+    background: #003459;
+}
