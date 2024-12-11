@@ -78,3 +78,63 @@ footer{
     height: 300px;
     width: 100vw;
 }
+
+.cardarrangement{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.competcard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 370px;
+    height: 545px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    text-align: center;
+  }
+  
+  .competcard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    justify-content: center;
+  }
+
+  .titlecard{
+    font-weight: 900;
+    font-size: 26px;
+  }
+
+  .learnmore{
+    background-color: #00A7E1; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 32px;
+    display: inline-block;
+    font-size: 21px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+
+  .learnmore:hover {
+    background-color: #005796;
+    transition: 0.4s;
+  }
+
+  .cardrow {margin: 0 -5px;}
+
+  .cardrow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
