@@ -65,6 +65,36 @@ a{
 
 /* Styling untuk about dan contact page*/
 
+.logo {
+    margin-left: 181px;
+    margin-right: 20px;
+}
+
+.logo img {
+    max-width: 358px;
+    max-height: 357px;
+}
+
+.content {
+    max-width: 905px;
+    max-height: 395px;
+    color: white;
+    text-align: right;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.title {
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.highlight {
+    color: white;
+    font-weight: bold;
+}
 .about-sect, .contact-sect{
     height: 100vh;
     width: 100vw;
