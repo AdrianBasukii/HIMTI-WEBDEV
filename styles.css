@@ -11,6 +11,12 @@
     font-family: "DM Sans", sans-serif;
 }
 
+/* additional setting */
+a{
+    text-decoration: none;
+    color: #003459;
+}
+
 
 /* body html biasanya ada margin/padding */
 body{
@@ -20,12 +26,15 @@ body{
 
 /* Styling untuk header page dan navbar */
 header{
-    height: 100vh;
-    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
     padding: 3rem;
     background: white;
     display:flex;
-    border: 5px solid red;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-left{
@@ -34,8 +43,22 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding: 0 5rem;
+}
+
+.header-right {
+    height: 100%;
+    width: 50%;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right img{
+    height: 100%;
 }
 
 .header-h1 {
@@ -44,11 +67,11 @@ header{
     width: 100%;
     height: 15rem;
     font-weight:900;
-    font-size:5rem;
+    font-size:7rem;
     color:#003459;
 }
 
-.header-h1-span {
+.header-h1-span-2 {
     font-weight: 500;
     width: 100%;
     height: 50%;
@@ -60,18 +83,72 @@ header{
     font-weight: 400;
 }
 
+@media only screen and (max-width: 1300px) {
+    .header-left{
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+    
+    .header-right {
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    .header-h1 {
+        text-align: center;
+    }
+    
+    .header-h1-span-1 {
+        width: 100%;
+    }
+
+    .header-par{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .header-h1{
+        margin-top: 4rem;
+        font-size: 5rem;
+    }
+
+    .header-par{
+        font-size: 2rem;
+    }
+
+    .header-right img{
+        height: 20rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header-h1{
+        margin-top: 7rem;
+        font-size: 3rem;
+    }
+
+    .header-par{
+        font-size: 1rem;
+    }
+
+    .header-right img{
+        height: 15rem;
+    }
+}
+
 nav{
+    display: flex;
+    justify-content: space-between;
     background: white;
     position: fixed;
     top: 0;
     width: 100%;
     height: 100px;
     padding: 1rem 3rem;
-}
-
-a{
-    text-decoration: none;
-    color: #003459;
+    z-index: 2;
 }
 
 .himti-logo{
@@ -92,6 +169,17 @@ a{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1.5rem;
+    background: white;
+    z-index: 2;
+}
+
+.hamburger{
+    display: none;
+    font-size: 2rem;
+    font-weight: 500;
+    border: none;
+    background: none;
+    margin-right: 2rem;
 }
 
 @media only screen and (max-width: 877px) {
@@ -99,16 +187,21 @@ a{
         display: none;
     }
 
+    .hamburger{
+        display: block;
+    }
+
     .nav-links {
         width: 100px;
         height: 100vh;
-        left: 0;
+        margin-left: -100px;
         flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
         gap:1rem;
         padding: 1rem;
         box-shadow: 5px 2px 12px 0px rgba(0,0,0,0.2);
+        transition: 0.3s all;
     }
 
     .nav-links li:first-child {
@@ -129,63 +222,34 @@ a{
 
 /* Styling untuk competition page */
 .competition-sect{
-    height:100vh;
-    width:100vw;
+    height: auto;
+    min-height:100vh;
+    width:100%;
+    padding: 4rem 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     background: #808AE7;
 }
 
-/* Styling untuk about dan contact page*/
-
-.logo {
-    margin-left: 181px;
-    margin-right: 20px;
-}
-
-.logo img {
-    max-width: 358px;
-    max-height: 357px;
-}
-
-.content {
-    max-width: 905px;
-    max-height: 395px;
+.compet-title{
     color: white;
-    text-align: right;
-    font-size: 32px;
-    font-weight: 400;
-}
-
-.about-title {
-    color: white;
-    font-size: 2.4em;
-    font-weight: bold;
-    text-align: center;
-}
-
-.highlight {
-    color: white;
-    font-weight: bold;
-}
-.about-sect, .contact-sect{
-    height: 100vh;
-    width: 100vw;
-    background: #003459;
-}
-
-/* Styling untuk footer */
-
-footer{
-    height: 300px;
-    width: 100vw;
+    font-size: 4rem;
+    font-weight: 700;
+    max-width: 1800px;
+    width: 100%;
+    text-align: left;
 }
 
 .cardarrangement{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: space-between;
+    width:100%;
+    max-width: 1800px;
 }
 
 .competcard {
@@ -196,6 +260,7 @@ footer{
     border-radius: 10px;
     background: #FFFFFF;
     text-align: center;
+    position: relative;
   }
   
   .competcard:hover {
@@ -206,6 +271,9 @@ footer{
   .titlecard{
     font-weight: 900;
     font-size: 26px;
+    width: 80%;
+    text-align: center;
+    margin: auto;
   }
 
   .learnmore{
@@ -217,24 +285,140 @@ footer{
     font-size: 21px;
     border-radius: 6px;
     font-weight: 600;
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .learnmore:hover {
     background-color: #005796;
     transition: 0.4s;
+    cursor:pointer;
   }
 
-  .cardrow {margin: 0 -5px;}
-
-  .cardrow:after {
-    content: "";
-    display: table;
-    clear: both;
+  @media only screen and (max-width: 1533px) {
+    .compet-title{
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .cardarrangement{
+        justify-content: center;
+    }
   }
 
-  .column {
+  @media only screen and (max-width: 844px) {
+    .competition-sect{
+        padding: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .compet-title{
+        font-size: 2.5rem;
+    }
+    .competcard {
+        scale: 0.9
+      }
+}
+
+/* Styling untuk about dan contact page*/
+.about-sect, .contact-sect{
+    padding: 1rem 12rem;
+    min-height: 100vh;
+    width: 100%;
+    background: #003459;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: row;
+}
+
+.about-container{
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    width: 50%;
+    color: white;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 358px;
+}
+
+.about-title {
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-description {
+    font-weight: 400;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.highlight {
+    color: white;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1533px) {
+    .about-sect, .contact-sect{
+        padding: 1rem 6rem;
+    }
+
+    .about-content {
+        width: 100%;
+        text-align: center
+    }
+    
+    .logo{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
   }
+
+  @media only screen and (max-width: 1000px) {
+    .about-content {
+        font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .about-title {
+        font-size: 2.5rem;
+    }
+    .about-content {
+        font-size: 1.5rem;
+    }
+    .logo{
+        scale: 0.75;
+    }
+  }
+
+/* Styling untuk footer */
+
+footer{
+    height: 300px;
+    width: 100%;
+}
   
