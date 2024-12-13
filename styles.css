@@ -15,7 +15,6 @@ body{
 }
 
 /* Styling untuk header page dan navbar */
-
 header{
     height: 100vh;
     width: 100vw;
@@ -43,7 +42,8 @@ a{
 .nav-links {
     font-weight:500;
     font-size: 1.2rem;
-    width: 30%;
+    width: 50%;
+    max-width: 500px;
     height: 100%;
     list-style-type: none;
     margin: 0;
@@ -55,8 +55,40 @@ a{
     gap: 1.5rem;
 }
 
-/* Styling untuk competition page */
+@media only screen and (max-width: 877px) {
+    .himti-logo{
+        display: none;
+    }
 
+    .nav-links {
+        width: 100px;
+        height: 100vh;
+        left: 0;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap:1rem;
+        padding: 1rem;
+        box-shadow: 5px 2px 12px 0px rgba(0,0,0,0.2);
+    }
+
+    .nav-links li:first-child {
+        display: none;
+    }
+
+    .nav-links li {
+        width: 100%;
+        height:32px;
+        text-align: center;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    nav{
+        padding: 0;
+    }
+  }
+
+/* Styling untuk competition page */
 .competition-sect{
     height:100vh;
     width:100vw;
@@ -64,13 +96,11 @@ a{
 }
 
 /* Styling untuk about dan contact page*/
-
 .about-sect, .contact-sect{
     height: 100vh;
     width: 100vw;
     background: #003459;
 }
-
 
 /* Styling untuk footer */
 
