@@ -139,6 +139,8 @@ header{
     }
 }
 
+/* NAVBAR */
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -219,6 +221,49 @@ nav{
         padding: 0;
     }
   }
+
+/* polygon */
+
+.pol-1, .pol-2, .pol-3{
+    position: absolute;
+}
+
+.pol-1{
+    right: 0;
+    bottom: -150px;
+}
+
+.pol-2{
+    top: 0;
+    right: 600px;
+}
+
+.pol-3{
+    left: 0;
+    bottom: -150px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .pol-1{
+        scale: 0.75;
+        right: -45px;
+        bottom: -300px;
+    }
+    
+    .pol-2{
+        display: none;
+    }
+    
+    .pol-3{
+        scale: 0.75;
+        left: -50px;
+        bottom: -300px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .pol-1,.pol-3{display: none}
+}
 
 /* Styling untuk competition page */
 .competition-sect{
@@ -347,7 +392,7 @@ nav{
     width: 50%;
     color: white;
     text-align: right;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     display: flex;
     justify-content: center;
@@ -381,23 +426,20 @@ nav{
     font-weight: 700;
 }
 
-
-.contact-sect{
-    width: 100%;
-    padding: 200px;
-    height: 150vh;
-    width: 100vw;
-    background: #003459;
-}
 .contact {
     padding: 20px 20px;
     color: white;
+    width: 100%;
+    max-width: 700px;
 }
-.contact h1 {
+
+.contact-title{
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
     text-align: center;
-    font-size: 40px;
-    margin-bottom: 30px;
 }
+
 .contact p {
     text-align: center;
     max-width: 590px;
@@ -405,10 +447,15 @@ nav{
     margin-bottom: 70px;
     font-size: 20px;
 }
+
 .contact form {
-    width: 600px;
+    width: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .contact input, .contact textarea {
     width: 100%;
     padding: 15px;
@@ -416,22 +463,29 @@ nav{
     border: none;
     border-radius: 5px;
 }
+
 .contact input[type="text"], input[type="email"] {
     height: 40px;
 }
+
 .contact textarea {
     height: 200px;
+    resize: none;
 }
+
 .contact button {
+    width: 200px;
+    text-align: center;
     background-color: #6c5ce7;
     color: white;
     border: none;
-    padding: 10px 100px;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
 }
+
 .contact button:hover {
     background-color: #5a4db2;
 }
@@ -462,11 +516,17 @@ nav{
     .about-title {
         font-size: 2.5rem;
     }
+    .contact-title{
+        font-size: 2.5em;
+    }
     .about-content {
         font-size: 1.5rem;
     }
     .logo{
         scale: 0.75;
+    }
+    .contact {
+        padding: 0;
     }
   }
 
