@@ -194,12 +194,13 @@ nav{
 
     .hamburger{
         display: block;
+        transition: 0.3s all;
     }
 
     .nav-links {
-        width: 100px;
+        width: 200px;
         height: 100vh;
-        margin-left: -100px;
+        margin-left: -200px;
         flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
@@ -429,6 +430,8 @@ nav{
     font-weight: 700;
 }
 
+/* CONTACT */
+
 .contact {
     padding: 20px 20px;
     color: white;
@@ -524,12 +527,16 @@ nav{
     }
     .about-content {
         font-size: 1.5rem;
+        text-align:left;
     }
     .logo{
         scale: 0.75;
     }
     .contact {
         padding: 0;
+    }
+    .about-sect, .contact-sect{
+        padding: 2rem;
     }
   }
 

@@ -124,10 +124,14 @@
      <script>
         document.querySelector('.hamburger').addEventListener('click', () => {
             const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+
             if (navLinks.style.marginLeft === '0px') {
-                navLinks.style.marginLeft = '-100px';
+                navLinks.style.marginLeft = '-200px';
+                hamburger.textContent = '≡';
             } else {
                 navLinks.style.marginLeft = '0px';
+                hamburger.textContent = 'x';
             }
         });
     </script>
